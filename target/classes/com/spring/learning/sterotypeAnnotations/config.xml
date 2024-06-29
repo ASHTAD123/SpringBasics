@@ -17,7 +17,13 @@
 	<context:component-scan
 		base-package="com.spring.learning.sterotypeAnnotations" />
 	 
+	 <util:list list-class="java.util.ArrayList" id="subjects">
 	 
+	 			<value>C.S</value>
+	 			<value>Java</value>
+	 			<value>C++</value>
+	 
+	 </util:list>
 	</beans>
 
 

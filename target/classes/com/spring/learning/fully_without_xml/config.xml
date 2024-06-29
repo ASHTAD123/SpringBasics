@@ -12,32 +12,8 @@
 	http://www.springframework.org/schema/util
 	http://www.springframework.org/schema/util/spring-util.xsd">
 
-
-	
-	<!-- standalone list -->
-	<util:list list-class="java.util.LinkedList" id="collogues">
-			<value>Akshay</value>
-			<value>Vaibhav</value>
-			<value>Shweta</value>
-			<value>Jay</value>
-			<value>Shridhar</value>
-			<value>Pooja</value>
-	</util:list>
 	
 	
-	<bean class="com.spring.learning.standaloneCollections.Address"
-		name="address" p:city="Mumbai" p:state="Maharashtra" />
-	
-	<bean class="com.spring.learning.standaloneCollections.Employee" 
-		  name="Employee" 
-		  autowire="byType">
-		<!-- Noramal method of doing -->
-		<!--  	<property name="collogues" ref="collogues"/> -->
-		
-		
-	 </bean>
-	 
-	 
 	</beans>
 
 
