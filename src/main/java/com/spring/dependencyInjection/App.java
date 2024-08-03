@@ -8,21 +8,26 @@ public class App
 {
     public static void main( String[] args )
     {
-    	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/spring/dependencyInjection/config.xml",
-    			"com/spring/dependencyInjection/config_reference_injection.xml",
+    	ApplicationContext applicationContext = new ClassPathXmlApplicationContext
+    			("com/spring/dependencyInjection/config_setter_getter_injection.xml",
     			"com/spring/dependencyInjection/config_constructor_injection.xml");
   
-    	// Setter & Getter Injection
+    	System.out.println();
+    	
+    	/* Setter & Getter Injection*/
+    	System.out.println("--------Setter & Getter Injection--------");
     	Student s1 = (Student) applicationContext.getBean("Student");
     	System.out.println(s1);
+    	System.out.println();
     	
-    	// Reference Injection
-    	A aObject = (A) applicationContext.getBean("ARef");
-    	System.out.println(aObject.getX());
-    	System.out.println("B value from A class : " + aObject.getObj().getY());
-    	
+//    	// Reference Injection
+//    	A aObject = (A) applicationContext.getBean("ARef");
+//    	System.out.println(aObject.getX());
+//    	System.out.println("B value from A class : " + aObject.getObj().getY());
+//    	
     	// Constructor Injection    
-    	Person person = (Person) applicationContext.getBean("person");
+    	System.out.println("--------Constructor Injection--------");
+    	Person person = (Person) applicationContext.getBean("Person");
     	System.out.println(person);
     }
 }

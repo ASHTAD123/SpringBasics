@@ -8,11 +8,18 @@
 	https://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
-
-	<bean class="com.spring.dependencyInjection.Person" 
-	  name="person"
-	  c:name="ABC"
-	  c:id="100">
-	 </bean>
+	
+	<bean class="com.spring.dependencyInjection.Teacher" name="Teacher">
+	<property name="teacherName" value="Teacher1"></property>
+	</bean>
+	
+	
+	<bean class="com.spring.dependencyInjection.Student" name="Student">
+		<!-- Setter Injection -->
+		<property name="StudentId" value="121"></property>
+		<property name="StudentName" value="Ash"></property>
+		<property name="StudentAddress" value="India"></property>
+		<property name="Teacher" ref="Teacher"></property>
+	</bean>
 
 </beans>

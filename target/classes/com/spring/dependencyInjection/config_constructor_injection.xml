@@ -8,10 +8,25 @@
 	https://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean class ="com.spring.dependencyInjection.Friend"
+		name="Friend">
+		<constructor-arg value="Ashtad"/>
+		<constructor-arg value="24"/>
+		
+	</bean>
+	
+	<bean class="com.spring.dependencyInjection.Person" name="Person">
+		<constructor-arg value="Ashtad1"/>
+		<constructor-arg value="1"/>
+		<constructor-arg ref="Friend"/>
+
+	</bean>
 
 	
-	<bean class="com.spring.dependencyInjection.B" name="bRef" p:y="90"></bean>
-		
-	<bean class="com.spring.dependencyInjection.A" name="ARef" p:x="12" p:obj-ref="bRef"> </bean>
+	<!-- Using c schema 
+	<bean class="com.spring.dependencyInjection.Person" name="person"
+		c:name="ABC" c:id="100">
+	</bean>-->
 
 </beans>
