@@ -19,12 +19,7 @@ public class App
     	Student s1 = (Student) applicationContext.getBean("Student");
     	System.out.println(s1);
     	System.out.println();
-    	
-//    	// Reference Injection
-//    	A aObject = (A) applicationContext.getBean("ARef");
-//    	System.out.println(aObject.getX());
-//    	System.out.println("B value from A class : " + aObject.getObj().getY());
-//    	
+
     	// Constructor Injection    
     	System.out.println("--------Constructor Injection--------");
     	Person person = (Person) applicationContext.getBean("Person");

@@ -8,7 +8,6 @@ public class Friend {
 	
 		public Friend() {
 			super();
-			// TODO Auto-generated constructor stub
 		}
 		public Friend(String name, int age) {
 			super();

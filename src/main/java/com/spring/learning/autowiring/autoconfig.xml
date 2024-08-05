@@ -13,23 +13,25 @@
 
 	<bean class="com.spring.learning.autowiring.Address"
 		name="address" p:city="Mumbai" p:state="Maharashtra" />
-	
+
 	<bean class="com.spring.learning.autowiring.Employee"
 		name="Employee" autowire="byName" />
-	
-	
-	<bean class="com.spring.learning.autowiring.Contacts" name="contactNamesAshtad" >
+
+
+	<bean class="com.spring.learning.autowiring.Contacts"
+		name="contactNamesPiyuu">
 
 		<property name="contactNames">
 
 			<map>
 				<entry key="contact_one" value="Deduu" />
-				<entry key="contact_two" value="Piyu" />
+				<entry key="contact_two" value="Ashu" />
 			</map>
 		</property>
-</bean>
+	</bean>
 
-<bean class="com.spring.learning.autowiring.Contacts" name="contactNamesDeedu" >
+
+ 	<bean class="com.spring.learning.autowiring.Contacts" name="contactNamesDeedu">
 
 		<property name="contactNames">
 
@@ -39,7 +41,7 @@
 			</map>
 		</property>
 	</bean>
-		
+
 
 
 </beans>

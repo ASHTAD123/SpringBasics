@@ -6,7 +6,7 @@ public class App {
 		
 		public static void main(String[] args) {
 			
-			AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/spring/learning/autowiring/config.xml");
+			AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/spring/learning/autowiring/autoconfig.xml");
 			Employee emp = context.getBean("Employee",Employee.class);
 			System.out.println(emp.getAddress());
 			System.out.println(emp.getContactNames());
