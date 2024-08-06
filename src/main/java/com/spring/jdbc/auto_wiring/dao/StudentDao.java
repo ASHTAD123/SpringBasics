@@ -1,4 +1,4 @@
-package com.spring.jdbc.dao;
+package com.spring.jdbc.auto_wiring.dao;
 
 import java.util.List;
 

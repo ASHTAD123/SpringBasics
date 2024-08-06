@@ -18,11 +18,12 @@
 
 	</bean>
 
+
 	<bean name="jdbcTemplate"
 		class="org.springframework.jdbc.core.JdbcTemplate"
 		p:dataSource-ref="dataSource">
 	</bean>
-
-	<bean class="com.spring.jdbc.dao.StudentDaoImp" name="StudentDaoImp"
-		p:jdbcTemplate-ref="jdbcTemplate"></bean>
+	
+	<bean class="com.spring.jdbc.dao.StudentDaoImp"
+		name="StudentDaoImp" p:jdbcTemplate-ref="jdbcTemplate"></bean>
 </beans>
